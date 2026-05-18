@@ -77,7 +77,7 @@ public class PlayerListItem extends DefinedPacket
         {
             Item item = items[0]; // Only one at a time
             String s = item.displayName != null ? item.displayName : ( item.username != null ? item.username : "" );
-            writeString( s, buf ); // TODO: Server unique only!
+            writeString( s, buf ); // TODO: Server unique only! 
             buf.writeBoolean( action != Action.REMOVE_PLAYER );
             buf.writeShort( item.ping );
         } else
